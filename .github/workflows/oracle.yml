@@ -2,6 +2,9 @@ name: Oracle tests
 
 on:
   workflow_dispatch:
+  schedule:
+    # 1 hour after the sync_upstream.yml job
+    - cron: '10 3 * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
