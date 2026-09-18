@@ -20,7 +20,7 @@ jobs:
       matrix:
         include:
           #- rdbms: base-database-service-26ai
-          #- rdbms: autonomous-transaction-processing-serverless-19c
+          - rdbms: autonomous-transaction-processing-serverless-19c
           - rdbms: autonomous-transaction-processing-serverless-26ai
     runs-on: [ self-hosted, Linux, X64, OracleTestPilot ]
     name: Oracle ${{matrix.rdbms}}
