@@ -121,6 +121,9 @@ jobs:
           - rdbms: autonomous-transaction-processing-serverless-19c
           - rdbms: autonomous-transaction-processing-serverless-26ai
     runs-on: [ self-hosted, Linux, X64, OracleTestPilot ]
+    defaults:
+      run:
+        shell: bash -el {0}
     name: Oracle ${{matrix.rdbms}}
     timeout-minutes: 60
     steps:
