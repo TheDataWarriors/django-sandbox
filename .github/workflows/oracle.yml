@@ -158,6 +158,9 @@ jobs:
           activate-environment: geodjango
           environment-file: "./tests/geolibs-gil.yml"
           channel-priority: strict
+        env:
+          CONDA_SSL_VERIFY: false
+          REQUESTS_CA_BUNDLE: ""
 
       - name: Show GIL status
         run: python -c "import sys; print('GIL enabled:', sys._is_gil_enabled())"
