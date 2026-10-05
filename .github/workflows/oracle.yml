@@ -146,9 +146,9 @@ jobs:
             - proj=9.6.*
             - pip=26.*
             - pip:
-                - -r ${GITHUB_ACTION_PATH}/tests/requirements/py3.txt
-                - -r ${GITHUB_ACTION_PATH}/tests/requirements/oracle.txt
-                - -e ${GITHUB_ACTION_PATH}/
+                - -r ./requirements/py3.txt
+                - -r ./requirements/oracle.txt
+                - -e ../
           EOF
 
       - name: Setup Miniforge
